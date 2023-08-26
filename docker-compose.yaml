@@ -1,0 +1,17 @@
+version: '1'
+
+
+
+services:
+  database:
+    image: 'mysql:latest'
+    container_name: 'mysql_netology_cloud_file_storage'
+    volumes:
+      - /mysqlData:/var/lib/mysql
+    environment:
+      - 'MYSQL_DATABASE=netology_cloud_file_storage'
+      - 'MYSQL_PASSWORD=root'
+      - 'MYSQL_ROOT_PASSWORD=root'
+      - 'MYSQL_USER=root'
+    ports:
+      - "3306:3306"
